@@ -28,14 +28,14 @@ export default {
       })
     },
 
-  postGuess(guess) {
-    return fetch(`${config.API_ENDPOINT}/language/guess`, {
+  postAnswer(answer) {
+    return fetch(`${config.API_ENDPOINT}/language/answer`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
         'authorization': `bearer ${TokenService.getAuthToken()}`
       },
-      body: JSON.stringify({guess})
+      body: JSON.stringify({answer})
     })
     .then(res => {
       return (!res.ok)
