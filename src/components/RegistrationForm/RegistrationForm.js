@@ -40,52 +40,58 @@ class RegistrationForm extends Component {
   render() {
     const { error } = this.state
     return (
-      <form
-        onSubmit={this.handleSubmit}
-      >
-        <div role='alert'>
-          {error && <p>{error}</p>}
-        </div>
-        <div>
-          <Label htmlFor='registration-name-input'>
-            Enter your name<Required />
-          </Label>
-          <Input
-            ref={this.firstInput}
-            id='registration-name-input'
-            name='name'
-            required
-          />
-        </div>
-        <div>
-          <Label htmlFor='registration-username-input'>
-            Choose a username<Required />
-          </Label>
-          <Input
-            id='registration-username-input'
-            name='username'
-            required
-          />
-        </div>
-        <div>
-          <Label htmlFor='registration-password-input'>
-            Choose a password<Required />
-          </Label>
-          <Input
-            id='registration-password-input'
-            name='password'
-            type='password'
-            required
-          />
-        </div>
-        <footer>
-          <Button type='submit'>
-            Sign up
-          </Button>
-          {' '}
-          <Link to='/login'>Already have an account?</Link>
-        </footer>
-      </form>
+      <fieldset>
+        <form
+          className='RegisterForm'
+          onSubmit={this.handleSubmit}
+        >
+          <div role='alert'>
+            {error && <p>{error}</p>}
+          </div>
+          <div>
+            <Label htmlFor='registration-name-input' className='register-label'>
+              Enter your name<Required />
+            </Label>
+            <Input
+              className='register-input'
+              ref={this.firstInput}
+              id='registration-name-input'
+              name='name'
+              required
+            />
+          </div>
+          <div>
+            <Label htmlFor='registration-username-input' className='register-label'>
+              Choose a username<Required />
+            </Label>
+            <Input
+              className='register-input'
+              id='registration-username-input'
+              name='username'
+              required
+            />
+          </div>
+          <div>
+            <Label htmlFor='registration-password-input' className='register-label'>
+              Choose a password<Required />
+            </Label>
+            <Input
+              className='register-input'
+              id='registration-password-input'
+              name='password'
+              type='password'
+              required
+            />
+          </div>
+          <footer>
+            <Button type='submit' className='button'>
+              Sign up
+            </Button>
+            {' '}
+            <Link to='/login' className='link-login'>Already have an account?</Link>
+          </footer>
+        </form>
+      </fieldset>
     )
   }
 }

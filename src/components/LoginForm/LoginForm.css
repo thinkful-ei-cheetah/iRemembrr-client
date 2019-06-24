@@ -1,0 +1,38 @@
+fieldset {
+  border: none;
+}
+
+.login-grid {
+  display: grid;
+  grid-template-columns: 100%;
+  height: 80vh;
+}
+
+.LoginForm {
+  margin: auto;
+  border-radius: 5px;
+  border: 1px solid black;
+  width: 100%;
+  padding: 15px;
+  max-width: 350px;
+}
+
+.form-input {
+  margin: 10px 0;
+  display: block;
+  width: 100%;
+  border-radius: 3px;
+  height: 30px;
+}
+
+.form-label {
+  display: block;
+}
+
+.login{ 
+  margin-top: 100px;
+}
+
+h2, button {
+  text-align: center;
+}

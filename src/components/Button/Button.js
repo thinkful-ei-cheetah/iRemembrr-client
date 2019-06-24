@@ -1,6 +1,6 @@
-import React from 'react'
-import cx from 'classnames'
-import './Button.css'
+import React from 'react';
+import cx from 'classnames';
+import './Button.css';
 
 const Button = React.forwardRef(({ className, ...props }, ref) => {
   return (
@@ -8,4 +8,4 @@ const Button = React.forwardRef(({ className, ...props }, ref) => {
   )
 })
 
-export default Button
+export default Button;

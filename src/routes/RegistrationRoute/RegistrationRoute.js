@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import RegistrationForm from '../../components/RegistrationForm/RegistrationForm'
+import React, { Component } from 'react';
+import RegistrationForm from '../../components/RegistrationForm/RegistrationForm';
 
 class RegistrationRoute extends Component {
   static defaultProps = {
@@ -15,7 +15,7 @@ class RegistrationRoute extends Component {
 
   render() {
     return (
-      <section>
+      <section className='register'>
         <p>
           Practice learning a language with the spaced reptition revision technique.
         </p>
@@ -28,4 +28,4 @@ class RegistrationRoute extends Component {
   }
 }
 
-export default RegistrationRoute
+export default RegistrationRoute;
