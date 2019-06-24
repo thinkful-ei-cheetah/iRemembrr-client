@@ -8,6 +8,12 @@
   display: grid;
   grid-template-columns: 50% 50%;
   border-bottom: 1px solid black;
+  background: black;
+  color: white;
+}
+
+.header-grid a {
+  color: white;
 }
 
 .header-menu {

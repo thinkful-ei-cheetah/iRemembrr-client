@@ -11,15 +11,24 @@ class DashboardRoute extends Component {
   }
 
   componentWillMount() {
-    
+    langService.getLanguageWords()
+      .then(response => {
+        this.setState({
+          totalScore: response.language.total_score,
+          words: response.words,
+          language: response.language.name
+        })
+      })
   }
 
   renderWords() {
     let words = this.state.words.map((word, i) => 
       <ul key={i}>
-        <li>{word.original}</li>
-        <li>Correct answer count: {word.correct_count}</li>
-        <li>Inorrect answer count: {word.incorrect_count}</li>
+        <li>
+          <h4>{word.original}</h4>
+          <p>correct answer count: {word.correct_count}</p>
+          <p>incorrect answer count: {word.incorrect_count}</p>
+        </li>
       </ul>
     )
 
@@ -32,13 +41,15 @@ class DashboardRoute extends Component {
 
     return (
       <section className='dashboard'>
-        <h1 className='dashboard-score'>Total correct answers: {totalScore}</h1>
         <h2>{subtitle}</h2>
-        <h2>Words to practice</h2>
+        <h1 className='dashboard-score'>Total correct answers: {totalScore}</h1>
+        <h3>Words to practice</h3>
 
         <div className='dashboard-words'>
           {this.renderWords()}
-          <Link to='/learn' className='button'>Start</Link>
+        </div>
+        <div className='button'>
+          <Link to='/learn'>Start practicing</Link>
         </div>
       </section>
     );
