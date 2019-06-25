@@ -35,7 +35,7 @@ class LearningRoute extends Component {
     e.preventDefault()
     this.setState({ hasAnswered: true })
 
-    LangService.postAnswer(this.state.answer)
+    LangService.postGuess(this.state.guess)
       .then(res => {
         if(res.isCorrect) {
           this.setState({
@@ -75,24 +75,24 @@ class LearningRoute extends Component {
       return (
         <fieldset>
           <form onSubmit={this.handleSubmitButton}>
-            <Label htmlFor='learning-answer-lable'>
-              Your answer: 
+            <Label htmlFor='learning-guess-lable'>
+              What's the translation for this word?
             </Label>
             <Input 
               type='text' 
-              id='learning-answer-input'
-              name='answer_input'
+              id='learning-guess-input'
+              name='guess_input'
               onChange={this.userInputTracker}
               required
             />
-            <Button type='submit' className='button'>Submit</Button>
+            <Button type='submit' className='button'>Submit your answer</Button>
           </form>
         </fieldset>
       )
     } else {
       return (
         <Button type='click' onClick={this.handleNextButton} className='button'>
-          New word
+          Try another word!
         </Button>
       )
     }
@@ -127,7 +127,7 @@ class LearningRoute extends Component {
         {this.displayFeedback()}
       </div> :
       <>
-        <h2>What is the translation for this word?</h2>
+        <h2>Translate the word:</h2>
         <span>{this.state.currentWord}</span>
       </>
     return (
@@ -142,7 +142,7 @@ class LearningRoute extends Component {
           </div>
 
           <div className='display-total-score'>
-            <p>Total score: {this.state.totalScore}</p>
+            <p>Your total score is: {this.state.totalScore}</p>
           </div>
 
           <div className='display-current-score'>

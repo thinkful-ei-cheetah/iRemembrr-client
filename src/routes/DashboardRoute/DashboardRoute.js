@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import langService from '../../services/language-service';
+import languageService from '../../services/language-service';
 import { Link } from 'react-router-dom';
 import './Dashboard.css';
 
@@ -11,12 +11,12 @@ class DashboardRoute extends Component {
   }
 
   componentWillMount() {
-    langService.getLanguageWords()
-      .then(response => {
+    languageService.getLanguageWords()
+      .then(res => {
         this.setState({
-          totalScore: response.language.total_score,
-          words: response.words,
-          language: response.language.name
+          totalScore: res.language.total_score,
+          words: res.words,
+          language: res.language.name
         })
       })
   }
@@ -44,7 +44,6 @@ class DashboardRoute extends Component {
         <h2>{subtitle}</h2>
         <h1 className='dashboard-score'>Total correct answers: {totalScore}</h1>
         <h3>Words to practice</h3>
-
         <div className='dashboard-words'>
           {this.renderWords()}
         </div>
