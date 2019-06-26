@@ -1,3 +1,50 @@
 main {
   height: 85vh;
 }
+
+@media (min-width: 500px) {
+  .dashboard-words p {
+    text-indent: 15px;
+    font-size: 15px;
+  }
+  .header-menu-link{
+    font-size: 18px;
+  }
+}
+@media (min-width: 687px) {
+  .LoginForm {
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 65%;
+    padding: 15px;
+  }
+  .dashboardScore {
+    top: 90px;
+    right: 180px;
+  }  
+}
+
+@media (min-width: 876px) {
+  .answerBtn {
+    display: inline-block;
+    width: 24.5%;
+    height: 100%;
+    margin: 0 2px 5px;
+  }
+  .learning-answerBtn-box {
+    margin: 5px 0px;
+    height: 40vh;
+  }
+  .header {
+    height: 10vh;
+  }
+  #logo {
+    margin: 0 0 0 30px;
+  }
+  .login-content {
+    padding: 30px;
+  }
+  .login-grid {
+    grid-template-columns: auto 60% auto;
+  }
+}

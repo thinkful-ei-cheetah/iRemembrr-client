@@ -74,18 +74,28 @@ class LearningRoute extends Component {
     if (!this.state.hasAnswered) {
       return (
         <fieldset>
-          <form onSubmit={this.handleSubmitButton}>
-            <Label htmlFor='learning-guess-lable'>
-              What's the translation for this word?
-            </Label>
-            <Input 
-              type='text' 
-              id='learning-guess-input'
-              name='guess_input'
-              onChange={this.userInputTracker}
-              required
-            />
-            <Button type='submit' className='button'>Submit your answer</Button>
+          <form 
+            className='displayForm' 
+            onSubmit={this.handleSubmitButton}
+          >
+            <div>
+              <Label className='form-label' htmlFor='learning-guess-lable'>
+                What's the translation for this word?
+              </Label>
+              <Input 
+                className='form-input'
+                type='text' 
+                id='learning-guess-input'
+                name='guess_input'
+                onChange={this.userInputTracker}
+                required
+              />
+            </div>
+            <div className='button-holder'>
+              <Button type='submit' className='button'>
+                Submit your answer
+              </Button>
+            </div>
           </form>
         </fieldset>
       )
@@ -149,6 +159,7 @@ class LearningRoute extends Component {
             <p>Correct answer count: {this.state.wordCorrectCount}</p>
             <p>Incorrect answer count: {this.state.wordIncorrectCount}</p>
           </div>
+
         </main>
       </section>
     );

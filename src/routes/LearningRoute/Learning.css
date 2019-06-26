@@ -1,0 +1,61 @@
+fieldset {
+  border: none;
+}
+
+.translate-word {
+  border: 1px solid black;
+  border-top: 1px solid white;
+  height: 200px;
+  width: 400px;
+  margin: auto;
+  padding-top: 50px;
+  text-align: center;
+  line-height: 30px;
+}
+
+.display-answer-form {
+  width: fit-content;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.display-answer-form input {
+  border: 1px solid lightgrey;
+}
+
+.display-total-score {
+  width: fit-content;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.display-current-score {
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.displayform {
+  margin: auto;
+  border-radius: 5px;
+  border: 1px solid black;
+  width: 100%;
+  padding: 15px;
+  max-width: 350px;
+}
+
+.form-lable {
+  display: block;
+}
+
+.form-input {
+  margin: 10px 0;
+  display: block;
+  width: 100%;
+  border-radius: 3px;
+  height: 30px;
+}
+
+.button-holder {
+  text-align: center;
+}
