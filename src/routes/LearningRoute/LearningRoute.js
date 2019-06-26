@@ -82,18 +82,19 @@ class LearningRoute extends Component {
             onSubmit={this.handleSubmitButton}
           >
             <div>
-              <Label className='form-label' htmlFor='learning-guess-lable'>
+              <Label className='form-label' htmlFor='learn-guess-lable'>
                 What's the translation for this word?
               </Label>
               <Input 
                 className='form-input'
                 type='text' 
-                id='learning-guess-input'
+                id='learn-guess-input'
                 name='guess_input'
                 onChange={this.userInputTracker}
                 required
               />
             </div>
+            
             <div className='button-holder'>
               <Button type='submit' className='button'>
                 Submit your answer
@@ -116,7 +117,7 @@ class LearningRoute extends Component {
       return (
         <>
           <h2>Awesome! Correct answer!</h2>
-          <p>The correct translation for {this.state.currentWord} was {this.state.correctAnswer} and you answered {this.state.answer}</p>
+          <p>The correct translation for "{this.state.currentWord}" was "{this.state.correctAnswer}" and you answered "{this.state.answer}"</p>
         </>
       )
     }
@@ -124,7 +125,7 @@ class LearningRoute extends Component {
       return (
         <>
           <h2>DUMBASS! (┛◉Д◉)┛彡┻━┻</h2>
-          <p>The correct translation for {this.state.currentWord} was {this.state.correctAnswer} and you answered {this.state.answer}</p>
+          <p>The correct translation for "{this.state.currentWord}" was "{this.state.correctAnswer}" and you answered "{this.state.answer}"</p>
         </>
       )
     }
