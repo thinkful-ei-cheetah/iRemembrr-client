@@ -35,7 +35,7 @@ class LearningRoute extends Component {
     e.preventDefault()
     this.setState({ hasAnswered: true })
 
-    LangService.postGuess(this.state.guess)
+    LangService.postGuess(this.state.answer)
       .then(res => {
         if(res.isCorrect) {
           this.setState({
@@ -52,6 +52,9 @@ class LearningRoute extends Component {
           })
         }
       })
+      .catch(err => {
+        console.error(err);
+      }) 
   }
 
   handleNextButton = e => {
