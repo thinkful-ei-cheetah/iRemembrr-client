@@ -1,7 +1,7 @@
 import config from '../config';
 import TokenService from './token-service';
 
-export default {
+const LangService = {
   getLanguageWords() {
       return fetch (`${config.API_ENDPOINT}/language`, {
         headers: {
@@ -44,3 +44,5 @@ export default {
     })
   }
 }
+
+export default LangService;
