@@ -3,7 +3,7 @@ What is [Spaced Repetition](https://en.wikipedia.org/wiki/Spaced_repetition)?
 A learning technique that incorporates increasing intervals of time between subsequent review of previously learned material in order to exploit the psychological [Spacing effect](https://en.wikipedia.org/wiki/Spacing_effect).
 
 ## Live Link
-[https://build.kpnba90.now.sh/register](https://build.kpnba90.now.sh/register)
+[https://iremembrr-client.kpnba90.now.sh/register](https://iremembrr-client.kpnba90.now.sh/register)
 #### Note: A demo user account is provided to explore the app (you can still choose to create a new account if you wish)
     username: admin
     password: pass
@@ -15,9 +15,13 @@ A learning technique that incorporates increasing intervals of time between subs
 
 ## Tech Stack
 ES6
+
 React.JS
+
 Express.JS
+
 PostgreSQL
+
 [Cypress IO](https://docs.cypress.io)
 
 ## Team
