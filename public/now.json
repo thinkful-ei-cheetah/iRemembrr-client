@@ -1,6 +1,7 @@
 {
   "version": 2,
   "name": "iRemembrr-client",
+  "alias": "mike-adam-iremembrr-client",
   "routes": [
       {
         "src": "^/static/(.*)",
