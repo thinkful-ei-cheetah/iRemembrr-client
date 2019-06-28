@@ -37,19 +37,25 @@ class LearningRoute extends Component {
 
     LangService.postGuess(this.state.answer)
       .then(res => {
-        if(res.isCorrect) {
+        if (res.isCorrect) {
           this.setState({
             correctAnswer: res.answer,
             wordCorrectCount: this.state.wordCorrectCount + 1,
             totalScore: res.totalScore,
             isCorrect: true
           })
+          console.log('true: answer', this.state.answer)
+          console.log('true: correct answer', this.state.correctAnswer)
+          console.log('true: current word', this.state.currentWord)
         } else {
           this.setState({
             correctAnswer: res.answer,
             wordIncorrectCount: this.state.wordIncorrectCount + 1,
             isCorrect: false
           })
+          console.log('false: answer', this.state.answer)
+          console.log('false: correct answer', this.state.correctAnswer)
+          console.log('false: current word', this.state.currentWord)
         }
       })
       .catch(err => {
