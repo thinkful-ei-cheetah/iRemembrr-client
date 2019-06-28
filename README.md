@@ -9,6 +9,23 @@ A learning technique that incorporates increasing intervals of time between subs
     password: pass
 
 ## Screenshots
+### Sign Up
+![sign up](screenshots/iR-signup.PNG)
+
+### Log In
+![log in](screenshots/iR-login.PNG)
+
+### Dashboard
+![dashboard](screenshots/iR-dashboard.PNG)
+
+### Learning - first look
+![learning01](screenshots/iR-learning01.PNG)
+
+### Learning - correct
+![learning02](screenshots/iR-learning02.PNG)
+
+### Learning -incorrect
+![learning03](screenshots/iR-learning03.PNG)
 
 ## API Documentation
 [https://github.com/thinkful-ei-cheetah/iRemembrr-server](https://github.com/thinkful-ei-cheetah/iRemembrr-server)

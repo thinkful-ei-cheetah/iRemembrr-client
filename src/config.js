@@ -1,4 +1,4 @@
 export default {
-  API_ENDPOINT: 'https://build.kpnba90.now.sh/register' || 'http://localhost:8000/api',
+  API_ENDPOINT: 'http://localhost:8000/api' || 'https://build.kpnba90.now.sh/register',
   TOKEN_KEY: 'spaced-repetition-auth-token',
 }
