@@ -31,15 +31,21 @@ A learning technique that incorporates increasing intervals of time between subs
 [https://github.com/thinkful-ei-cheetah/iRemembrr-server](https://github.com/thinkful-ei-cheetah/iRemembrr-server)
 
 ## Tech Stack
-ES6
+* HTML5
 
-React.JS
+* CSS3
 
-Express.JS
+* ES6
 
-PostgreSQL
+* React.JS
 
+* Express.JS
+
+## Testing
 [Cypress IO](https://docs.cypress.io)
+
+## Production
+* Deployed via Zeit
 
 ## Team
 Mike Jung - Front-End Components, Routhing, Services, Contexts, Testing, and UI Design
