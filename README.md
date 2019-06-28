@@ -32,14 +32,9 @@ A learning technique that incorporates increasing intervals of time between subs
 
 ## Tech Stack
 * HTML5
-
 * CSS3
-
 * ES6
-
 * React.JS
-
-* Express.JS
 
 ## Testing
 [Cypress IO](https://docs.cypress.io)
