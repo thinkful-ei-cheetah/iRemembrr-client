@@ -1,4 +1,29 @@
 # Spaced Repetition Capstone
+What is [Spaced Repetition](https://en.wikipedia.org/wiki/Spaced_repetition)?
+A learning technique that incorporates increasing intervals of time between subsequent review of previously learned material in order to exploit the psychological [Spacing effect](https://en.wikipedia.org/wiki/Spacing_effect).
+
+## Live Link
+[https://build.kpnba90.now.sh/register](https://build.kpnba90.now.sh/register)
+#### Note: A demo user account is provided to explore the app (you can still choose to create a new account if you wish)
+    username: admin
+    password: pass
+
+## Screenshots
+
+## API Documentation
+[https://github.com/thinkful-ei-cheetah/iRemembrr-server](https://github.com/thinkful-ei-cheetah/iRemembrr-server)
+
+## Tech Stack
+ES6
+React.JS
+Express.JS
+PostgreSQL
+[Cypress IO](https://docs.cypress.io)
+
+## Team
+Mike Jung - Front-End Components, Routhing, Services, Contexts, Testing, and UI Design
+
+Adam Pavlicek - Front-End Components, Routhing, Services, Contexts, Testing, and UI Design
 
 ## Setup
 
@@ -9,7 +34,7 @@ To setup the application
 
 The project expects you have the Spaced repetition API project setup and running on http://localhost:8000.
 
-Find instructions to setup the API here https://github.com/Thinkful-Ed/spaced-repetition-api.
+Find instructions to setup the API here https://github.com/thinkful-ei-cheetah/iRemembrr-server.
 
 ## Running project
 
@@ -45,3 +70,4 @@ npm run cypress:run
 ```
 
 This will save video recordings of the test runs in the directory `./cypress/videos/`.
+
