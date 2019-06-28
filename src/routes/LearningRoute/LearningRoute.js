@@ -14,14 +14,16 @@ class LearningRoute extends Component {
     totalScore: 0,
     wordCorrectCount: 0,
     wordIncorrectCount: 0,
-    isCorrect: null,
+    isCorrect: false,
     hasAnswered: false,
+    error: null,
   }
 
   componentDidMount() {
     LangService.getLanguageHead()
       .then(res => {
         this.setState({
+          nextWord: res.nextWord,
           currentWord: res.nextWord,
           lastWord: res.nextWord,
           wordCorrectCount: res.wordCorrectCount,
@@ -44,34 +46,30 @@ class LearningRoute extends Component {
             totalScore: res.totalScore,
             isCorrect: true
           })
-          console.log('true: answer', this.state.answer)
-          console.log('true: correct answer', this.state.correctAnswer)
-          console.log('true: current word', this.state.currentWord)
         } else {
           this.setState({
             correctAnswer: res.answer,
             wordIncorrectCount: this.state.wordIncorrectCount + 1,
             isCorrect: false
           })
-          console.log('false: answer', this.state.answer)
-          console.log('false: correct answer', this.state.correctAnswer)
-          console.log('false: current word', this.state.currentWord)
         }
       })
       .catch(err => {
-        console.error(err);
+        this.setState({ error: err.message })
       }) 
   }
 
   handleNextButton = e => {
     e.preventDefault()
-    this.setState({ hasAnswered: false, isCorrect: null })
+    this.setState({ hasAnswered: false, isCorrect: false })
 
     LangService.getLanguageHead()
       .then(res => {
         this.setState({
-          currentWord: res.nextWord,
+          answer: '',
+          correctAnswer: '',
           lastWord: res.nextWord,
+          currentWord: res.nextWord,
           wordCorrectCount: res.wordCorrectCount,
           wordIncorrectCount: res.wordIncorrectCount,
           totalScore: res.totalScore,
